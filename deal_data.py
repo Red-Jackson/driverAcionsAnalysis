@@ -246,8 +246,6 @@ if __name__ == '__main__':
     speed_threshold = 42 # 速度阈值
 
     with open("china_places.json", 'r') as load_f:
-        # 重新编码为utf-8
-        load_f = load_fp.read().decode(encoding='gbk').encode(encoding='utf-8')
         load_dict = json.load(load_f)
         jsondictlist = [] #加载json后，用一个新的list进行存储
         for dictx in load_dict[1:]:
